@@ -1,0 +1,42 @@
+.screen {
+  position: absolute;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  color: white;
+  padding: 10px;
+  cursor: move;
+  text-align: center;
+}
+
+.content {
+  padding: 10px;
+  overflow: auto;
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #2196F3;
+  cursor: se-resize;
+}
+
+.reset-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
