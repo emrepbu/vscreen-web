@@ -16,4 +16,5 @@ export default defineConfig({
     },
   },
   "base": "/vscreen-web/",
+  assetsInclude: ['**/*.lottie'],
 })

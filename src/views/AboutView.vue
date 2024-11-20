@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import onesLottie from '@/assets/ones.lottie';
 
 const playerRef = ref(null);  // Reference to the DotLottie component
 const isPlaying = ref(false); // To track if the animation is playing
@@ -40,7 +41,7 @@ onMounted(() => {
         ref="playerRef"
         autoplay
         loop
-        src="./src/assets/lottiefiles/ones.lottie"
+        :src="onesLottie"
         style="height: 500px; width: 500px"
         @click="toggleAnimation"
     />
