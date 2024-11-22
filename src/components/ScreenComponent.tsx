@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Card } from 'vvscreen';
 
 interface ScreenComponentProps {
     headerText?: string;
@@ -127,6 +128,7 @@ const ScreenComponent: React.FC<ScreenComponentProps> = ({
             </div>
             <div className="content">
                 <p>{content}</p>
+                <Card name={headerText}/>
             </div>
 
             {/* Resize Handle */}
