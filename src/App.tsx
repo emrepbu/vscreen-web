@@ -1,5 +1,5 @@
 import './App.css'
-import ScreenComponent from "./ScreenComponent.tsx";
+import ScreenComponent from "./components/ScreenComponent.tsx";
 
 function App() {
     return (
