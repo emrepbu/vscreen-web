@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import {useRive} from "@rive-app/react-canvas";
 
-function App() {
-  const [count, setCount] = useState(0)
+export const Simple = () => {
+    const {RiveComponent} = useRive({
+        src: "holo_card.riv",
+        stateMachines: "cardInteractivity",
+        autoplay: true,
+    });
+    return <RiveComponent/>;
+};
+export const Simple2 = () => {
+    const {rive, RiveComponent} = useRive({
+        src: 'https://cdn.rive.app/animations/vehicles.riv',
+        stateMachines: "bumpy",
+        autoplay: false,
+    });
+    return (
+        <RiveComponent
+            onMouseEnter={() => rive && rive.play()}
+            onMouseLeave={() => rive && rive.pause()}
+        />
+    );
+};
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+    return (
+        <div className="RiveContainer">
+            <Simple/>
+            <Simple2/>
+        </div>
+    );
 }
-
-export default App
